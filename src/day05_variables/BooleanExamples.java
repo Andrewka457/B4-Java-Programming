@@ -1,4 +1,4 @@
-package day5_variables;
+package day05_variables;
 
 public class BooleanExamples {
     public static void main(String[] args) {
