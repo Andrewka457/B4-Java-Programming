@@ -30,7 +30,7 @@ public class Comments {
         // сохраняется а to do лист, чтобы не забыть что-то сделать потом
         // работает со всеми видами комментов
         //
-        // TODO: надо потом найти цену
+
         System.out.println("I recently bought a computer for &.....");
 
 
