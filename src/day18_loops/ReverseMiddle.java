@@ -6,19 +6,36 @@ public class ReverseMiddle {
     public static void main(String[] args) {
 
         Scanner key = new Scanner(System.in);
-        System.out.println("Give a sentence with at least three words: ");
-        String sentence = key.nextLine().trim();
-        int count = 0;
+        String sentence;
+        int count;
+
+        do {
+            System.out.print("Give a sentence with at least three words: ");
+            sentence = key.nextLine().trim();
+            count = 1;
+
+            for (int i = 0; i < sentence.length(); i++) {
+
+                if (sentence.charAt(i) == ' ' || sentence.charAt(i) == '_') {
+
+                    count++;
+
+                }
+
+            }
+        } while (count < 3);
+
+        int count2 = 0;
 
         for (int i = 0; i < sentence.length(); i++) {
             if (sentence.charAt(i) == ' '){
 
-            count++;
+            count2++;
 
             }
         }
 
-        if (count >= 2) {
+        if (count2 >= 2) {
 
             int indexOfFirstSpace = sentence.indexOf(" ");
             int indexOfLastSpace = sentence.lastIndexOf(" ");
@@ -35,7 +52,7 @@ public class ReverseMiddle {
             System.out.println("Invalid input");
         }
     /*
-        TODO: Homework
+        Homework
             Ask a user to enter a sentence with at least 3 words until user gives it to you.
     */
     }
