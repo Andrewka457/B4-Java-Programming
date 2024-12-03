@@ -1,0 +1,46 @@
+0. 	I make sure that I switched to the develop branch / I make sure that I am on the develop branch.
+		- Command: 	git checkout develop
+					git branch
+
+1. 	I make sure my local develop branch is UP TO DATE.
+		- Why develop?
+		- In our company develop branch is the one we keep all the latest code in during the Sprint. Everyone during Spring merges their code into this branch. So, before we work on a new story, we create a new branch from develop to have all the latest version.
+
+	I switch to the develop branch and update it
+		- Command: git pull origin develop
+
+
+2. 	I create a new branch from develop
+		- Command: git branch "yourNewBranchName"  --- > normally in our company we name our branches with teh USER STORY NUMBER
+
+3. 	Then I am switching to that branch
+		- Command: git chekcout yourNewBranchName
+
+
+4.  Normally, I delete my old branches from my local. Because I do not want to keep unused staff. Want to make it clean organized.
+
+5.  Before deleting I run the command to check what branches I have and then I delete
+		- Command: git branch
+		- Command: git branch -D branchName
+
+6. 	Then I again run the command to check that if it is deleted.
+
+
+7. 	Then I start writing code for my automation fo my story. If I do not finish automating my story in the same day. I just commit to save
+		- Command: git commit -a -m "some message"
+
+		- Then next day, I continue on the same branch to automate my story
+
+
+8. 	If I am done by automating my story, I push my branch and commits into GitHub
+		- Command: git push origin yourBranchName
+
+
+9. 	Once I push my work/branch into GitHub, I creat a PULL REQUEST (I create a PR), from my branch into develop branch.
+
+10.	I make sure that there is NO MERGE CONFLICT.
+
+11. Then, I assign my teammates to review my codes before I merge it.
+
+12. In our company actually we a really nice, really really nice rule that we can not merge unless we have at least 2 APPROVALS.
+	How do you do in your company? Do you guys have similar thing?
