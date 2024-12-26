@@ -104,4 +104,19 @@ public class StringUtil {
         return unique;
     }
 
+    /**
+     * This method transform given String in camelCase format
+     * @param str is the given String
+     * @return String in camelCase format
+     */
+    public static String camelCase(String str) {
+
+        str = str.trim();
+
+        while (str.contains(" ")) {
+            str = str.replaceFirst(" " + str.charAt(str.indexOf(" ") + 1), "" + (char) (str.charAt(str.indexOf(" ") + 1) - 32));
+        }
+        return str;
+    }
+
 }

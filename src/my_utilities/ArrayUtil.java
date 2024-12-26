@@ -132,7 +132,37 @@ public class ArrayUtil {
     }
 
     /**
-     * TODO: add the version of (method overloaded) the above two method fro String
+     * This method returns String array with given String element added at the end of the given String array
+     * @param arr given String array
+     * @param str given String element
+     * @returns String array
      */
+    public static String [] addElemInArr (String [] arr, String str) {
+
+        String [] addedArr = Arrays.copyOf(arr, arr.length + 1); // {1, 2, 3, 4, 5, _ };
+        addedArr [addedArr.length - 1] = str;
+
+        return addedArr;
+    }
+
+
+    /**
+     * This method returns String array with given String var args elements added at the end of the given String array
+     * @param arr given String array
+     * @param arr2 given String var args elements
+     * @returns String array
+     */
+    public static String [] addElemInArray (String  [] arr, String  ... arr2 ) {
+
+        String  [] addedAr = Arrays.copyOf(arr, arr.length + arr2.length);  // {1, 2, 3, 4, 5,  _, _, _,.......}
+
+
+        for (int i = arr.length, j = 0; i < addedAr.length; i++, j++) {   // i < 9  --- >  i = 5, j = 0;  i < 9; i++, j++
+            addedAr[i] = arr2[j];
+        }
+
+        return addedAr;
+    }
+
 
 }
