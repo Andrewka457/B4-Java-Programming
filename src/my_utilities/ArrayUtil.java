@@ -48,6 +48,25 @@ public class ArrayUtil {
     }
 
     /**
+     * This method returns boolean whether given char arr contains the given letter
+     * @param arr given array
+     * @param letter given letter
+     * @return boolean whether contains or not
+     */
+    public static boolean contains(char [] arr, char letter){
+        boolean result = false;
+
+        for (int each : arr) {
+            if (each == letter) {
+                result = true;
+                break;
+            }
+        }
+
+        return result;
+    }
+
+    /**
      * This method returns the index of given int num from the given int array
      * @param arr given int array
      * @param num given in value
@@ -163,6 +182,5 @@ public class ArrayUtil {
 
         return addedAr;
     }
-
 
 }
