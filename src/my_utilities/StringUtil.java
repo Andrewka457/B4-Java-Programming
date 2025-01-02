@@ -119,4 +119,13 @@ public class StringUtil {
         return str;
     }
 
+    /**
+     * This method transform given String of words as array with wrong quotes in real String array
+     * @param str is the given String
+     * @return valid String array
+     */
+    public static String [] antiFeyruz (String str) {
+        return str.replace("”", "").replace("“", "").replace("{", "").replace("}", "").split(", ");
+    }
+
 }
