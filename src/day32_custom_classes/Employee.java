@@ -1,7 +1,5 @@
 package day32_custom_classes;
 
-import javax.xml.namespace.QName;
-
 public class Employee {
 
     String name;
