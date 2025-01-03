@@ -1,7 +1,7 @@
 package day31_custom_classes;
 
 public class Car {
-    // Instance variables - fields
+
     String model;
     int year;
     String color;
@@ -15,7 +15,6 @@ public class Car {
                 "\n\tFuel Level: " + fuelLevel;
     }
 
-
     public void drive (){
         System.out.println("driving " + model);
         fuelLevel -= 5;
@@ -23,12 +22,11 @@ public class Car {
 
     public void fillTank () {
         System.out.println("filling tank");
-        fuelLevel = 100; // reassign to 100
+        fuelLevel = 100;
     }
 
-
     public boolean isFuelLevelLow () {
-        return fuelLevel < 25; // 100 < 25
+        return fuelLevel < 25;
     }
 
 
